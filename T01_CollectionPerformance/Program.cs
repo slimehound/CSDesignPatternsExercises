@@ -8,18 +8,8 @@ using System.Linq;
 const int count = 1_000_000;
 const int searchIndex = 551_467;
 
-//List<Pair> baseList = new();
+string value;
 
-//for (int i = 0; i < count; i++)
-//{
-//    baseList.Add(new() { Index = i, Text = i.ToString() });
-//}
-
-//baseList = baseList.Shuffle().ToList();
-
-
-
-//Pair[] array = baseList.ToArray();
 Pair[] array = new Pair[count];
 
 var sw = Stopwatch.StartNew();
@@ -33,9 +23,9 @@ Console.WriteLine($"Array created in {sw.ElapsedTicks:N0} ticks");
 
 sw.Restart();
 
-var value = array.Where(x => x.Index == searchIndex).Select(x => x.Text).FirstOrDefault();
+value = array.Where(x => x.Index == searchIndex).Select(x => x.Text).FirstOrDefault();
 
-Console.WriteLine($"Array item {value} found in {sw.ElapsedTicks:N0} ticks");
+Console.WriteLine($"Array item {value} searched in {sw.ElapsedTicks:N0} ticks");
 
 sw.Restart();
 
@@ -47,7 +37,6 @@ Console.WriteLine();
 
 
 
-//List<Pair> list = baseList.ToList();
 List<Pair> list = new();
 
 sw.Restart();
@@ -63,7 +52,7 @@ sw.Restart();
 
 value = list.Where(x => x.Index == searchIndex).Select(x => x.Text).FirstOrDefault();
 
-Console.WriteLine($"List item {value} found in {sw.ElapsedTicks:N0} ticks");
+Console.WriteLine($"List item {value} searched in {sw.ElapsedTicks:N0} ticks");
 
 sw.Restart();
 
@@ -76,7 +65,6 @@ Console.WriteLine();
 
 
 
-//Dictionary<int, string> dict = baseList.ToDictionary(x => x.Index, x => x.Text);
 Dictionary<int, string> dict = new();
 
 sw.Restart();
@@ -92,7 +80,7 @@ sw.Restart();
 
 value = dict.Where(x => x.Key == searchIndex).Select(x => x.Value).FirstOrDefault();
 
-Console.WriteLine($"Dictionary item {value} found in {sw.ElapsedTicks:N0} ticks");
+Console.WriteLine($"Dictionary item {value} searched in {sw.ElapsedTicks:N0} ticks");
 
 sw.Restart();
 
