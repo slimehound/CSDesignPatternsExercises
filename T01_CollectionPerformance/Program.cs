@@ -1,4 +1,4 @@
-﻿using Humanizer;
+﻿using MoreLinq;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -8,15 +8,25 @@ using System.Linq;
 const int count = 1_000_000;
 const int searchIndex = 551_467;
 
+//List<Pair> baseList = new();
+
+//for (int i = 0; i < count; i++)
+//{
+//    baseList.Add(new() { Index = i, Text = i.ToString() });
+//}
+
+//baseList = baseList.Shuffle().ToList();
+
+
+
+//Pair[] array = baseList.ToArray();
 Pair[] array = new Pair[count];
-List<Pair> list = new();
-Dictionary<int, string> dict = new();
 
 var sw = Stopwatch.StartNew();
 
 for (int i = 0; i < count; i++)
 {
-    array[i] = new() { Index = i, Text = i.ToWords() };
+    array[i] = new() { Index = i, Text = i.ToString() };
 }
 
 Console.WriteLine($"Array created in {sw.ElapsedTicks:N0} ticks");
@@ -37,11 +47,14 @@ Console.WriteLine();
 
 
 
+//List<Pair> list = baseList.ToList();
+List<Pair> list = new();
+
 sw.Restart();
 
 for (int i = 0; i < count; i++)
 {
-    list.Add(new() { Index = i, Text = i.ToWords() });
+    list.Add(new() { Index = i, Text = i.ToString() });
 }
 
 Console.WriteLine($"List created in {sw.ElapsedTicks:N0} ticks");
@@ -63,11 +76,14 @@ Console.WriteLine();
 
 
 
+//Dictionary<int, string> dict = baseList.ToDictionary(x => x.Index, x => x.Text);
+Dictionary<int, string> dict = new();
+
 sw.Restart();
 
 for (int i = 0; i < count; i++)
 {
-    dict[i] = i.ToWords();
+    dict[i] = i.ToString();
 }
 
 Console.WriteLine($"Dictionary created in {sw.ElapsedTicks:N0} ticks");
