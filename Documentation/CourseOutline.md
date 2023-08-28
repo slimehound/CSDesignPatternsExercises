@@ -245,7 +245,7 @@ dicationaries are otherwise a little slower than arrays and lists for other purp
   - Each of these collections then has a both a query run on it to find a specific item, and is indexed directly.
   - In each case the array and list are faster than the dictionary - so what's the point of a dictionary?
   - This is a cheat example though, because the data is sorted.
-1. Run project `T5-3abCollectionPerformance`.
+1. Run project `T5-3b_CollectionPerformance`.
   - This project is similar to the previous one, however it uses the Nuget package morelinq to shuffle the data.
   - Directly indexing the array and list won't work, because we no longer implicityly know the index of the item we want to find.
   - So arrays and lists in this case require a query (with an embedded `foreach`).
