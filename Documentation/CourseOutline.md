@@ -255,4 +255,11 @@ dicationaries are otherwise a little slower than arrays and lists for other purp
 
 ## 5.4. LINQ
 
-By now you have seen
+By now you have seen some examples of LINQ. LINQ is a C# library that brings functional programming to the language. You will have seen that we are able to
+select data in a ***declarative*** manner with LINQ as compared to ***prodecural*** data handling with `foreach` loops and so forth.
+
+Review where we have used LINQ so far. One thing you will notice for example is the `=>` lamda notation in the `Where` method calls. A lamda is an
+"anonymous method". So far we have considered methods that have names. Take a look at the code for the `Where` method (right click one and go from there)
+and you will see that its second parameter is a `Func`; this is a "delegate", which is a fancy way of saying that you supply a method as a parameter.
+This method can be a method name in a class, however it would be clumsy to write a new named method for every `.Where` when you use LINQ (my system
+Vectis uses thousands of LINQ calls). So instead for simple methods, you can dodge the need for a method name and use this lamda notation instead.
