@@ -51,7 +51,7 @@ Also see the considerably more complex [CSPROJ](https://github.com/Material-Blaz
 ## Overall C# program structure
 Bringing the previous sections together gives a good appreciation of the structure around building a .NET program or library, albeit without seeing the code. The image below is the structure of this repo at the time of writing. If you're reading this on GitHub you'll see the current structure to the left, otherwise from Visual Studio this is in the Solution Explorer.
 
-![image](https://github.com/simonziegler/CSDesignPatternsExercises/assets/11708435/b0456204-28c9-4725-8fd0-a4757fd00ec8)
+<img src="https://user-images.githubusercontent.com/11708435/263727952-b0456204-28c9-4725-8fd0-a4757fd00ec8.png" alt="image" width="300">
 
 The repo is brought together by the solution file with a `.sln` extension at the top level; don't edit these manually. This file tells Visual Studio what projects belong to the overall solution, and how to show extraneous files, such as this documentation (in a Markdown, `.md` file) in the Solution Explorer. Each project within the solution/repo (VS terminology versus Git terminology) is controlled by its `.csproj` file. The projects then have the following file types:
 - `.cs` files containing C# code
