@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		Documentation\CourseOutline.md = Documentation\CourseOutline.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01_DataTypes", "T01_DataTypes\T01_DataTypes.csproj", "{6A8830C2-021C-43CA-9058-F64CDF1F5666}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{E579668F-F646-46DE-A142-27FB23CC9632}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E579668F-F646-46DE-A142-27FB23CC9632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E579668F-F646-46DE-A142-27FB23CC9632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A8830C2-021C-43CA-9058-F64CDF1F5666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A8830C2-021C-43CA-9058-F64CDF1F5666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A8830C2-021C-43CA-9058-F64CDF1F5666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A8830C2-021C-43CA-9058-F64CDF1F5666}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

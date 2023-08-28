@@ -96,7 +96,7 @@ The tutorials I have written for this course will use top level statements.
 
 ### Language constructs
 
-#### Primitive data types
+#### Built in data types
 C# has a set of value variable types listed below that represent simple data. Annotations are for those of particular immediate use. See the [C# language reference](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types) for more information.
 
 | C# type keyword | .NET type | Notes |
@@ -118,16 +118,41 @@ C# has a set of value variable types listed below that represent simple data. An
 | ushort | System.UInt16 | |
 <figcaption><b>Figure 5 - Built in value types</b></figcaption><br><br>
 
-Calling a data type a "value" type indicates that when a variable is passed into a method, its value is passed rather than a reference to the memory holding that variable. There are also some built in reference types below whereby passing a variable of that type to a method passes a reference to the memory location holding that variable's data, and therefore the method can change the data value (generally considered to be a very bad idea).
+Calling a data type a "value" type indicates that when a variable is passed into a method, its value is passed rather than a reference to the memory holding that variable.
+There are also some built in reference types below whereby passing a variable of that type to a method passes a reference to the memory location holding that variable's data,
+and therefore the method can change the data value (generally considered to be a very bad idea). 
 
 | C# type keyword | .NET type | Notes |
 |:---|:---|:---|
 | object | System.Object | All classes are an object. |
-| string | System.String | A string is a string of characters of arbitrary length. |
+| string | System.String | A string of characters of arbitrary length. |
 | dynamic | System.Object | |
 <figcaption><b>Figure 6 - Built in reference types</b></figcaption><br><br>
 
+#### EXERCISE
+1. Run project `T01_DataTypes` to see some operations on `int`, `double` and `string` variables.
+1. Add some code to print out the individual characters of the array `name` by printing `name[0]` and 'name[1]'.
+1. Now try the same for the next index, `name[3]` and see what happens.
+1. Print out `str1[3]` to see how you can access an indvidual character of a string. Also try `str1[1000]` to see what happens.
+1. Work out how to get a new string called `newResult` that takes the value "Ziegler" in `str2` and replaces the "er" with the text "wibble". Google it. Note that local variables like `newResult` by convention use
+[camel case](https://www.c-sharpcorner.com/UploadFile/8a67c0/C-Sharp-coding-standards-and-naming-conventions/). Get to know coding conventions for whatever language you are using.
+
+### Conditionals
+There are three types of conditional in C#:
+- `if` ... `else if` ... `else` statements (from C/C++).
+- `switch` statements (from C/C++).
+- `switch` expressions (invented for C# 8).
+
+#### EXERCISE
+
+
 ### Classes and structs
+C# is an object orientated language, and objects come in two flavours: `struct` and `class`. That's a lie, there's also `record`, which you can Google (records seem to be little used, but I use them all across my business's
+system, because I can make data immutable and therefore very safe with a `record`).
+
+Both a `struct` and a `class` are data types that you can define, and which both hold data and methods that encapsulate functionality that you want to perform on the data in an object. A `struct` is a value type whereas a `class` is
+a reference type. There are then variations on the theme of each, so Google C# documentation to look into `readonly struct` and other variants.
+
 ### Interfaces
 ### Generics
 ### Collections and collection performance
