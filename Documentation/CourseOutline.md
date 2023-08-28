@@ -31,7 +31,7 @@ Note how in each case we are referencing the `CSPROJ` ("C # project file") file,
 		<OutputType>Exe</OutputType>					<!-- Determines that the output is an executable file -->
 		<TargetFramework>net7.0</TargetFramework>			<!-- Specifies .NET version 7, the current version released in November 2022 (.NET 8 is imminent) -->
 		<ImplicitUsings>enable</ImplicitUsings>				<!-- Google it -->
-		<Nullable>enable</Nullable>						<!-- Google it -->
+		<Nullable>enable</Nullable>					<!-- Google it -->
 	</PropertyGroup>
 
 	<ItemGroup>
