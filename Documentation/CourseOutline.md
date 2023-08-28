@@ -10,6 +10,7 @@ Being a managed language, C# resolves a lot of problems associated with low leve
 1. It is a "compile once, run anywhere" model, given that all you need to run your assembly for any given architecture is the ability to install the .NET runtime.
 2. .NET manages memory for you. There's no need to allocate and de-allocate large areas of memory as required in C/C++, because this is done for you. Unlike C/C++ if you try to access an index of an array beyond that array's bounds, you will get a runtime exception.
 3. There are no pointers, so again no ability to access areas of memory to which you should have no access.
+4. Not related specifically to being a managed language, C#/.NET benefits from a vast offering of packages from (Nuget)[nuget.org], including more packages from Microsoft, open source ("OSS") packages and commercial packages for which a paid licence is required. [@MarkStega](https://github.com/MarkStega) and I run the [Material.Blazor](https://github.com/Material-Blazor/) GitHub account that publishes four OSS packages to Nuget.
 
 So:
 - C# is the programming language (also F# and VB.NET).
@@ -42,13 +43,26 @@ Note how in each case we are referencing the `CSPROJ` ("C # project file") file,
 </Project>
 ```
 
-Also see the considerably more complex [CSPROJ](https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor/Material.Blazor.csproj) file built by my development partner [@MarkStega](https://github.com/MarkStega) for our Material.Blazor OSS project.
+Also see the considerably more complex [CSPROJ](https://github.com/Material-Blazor/Material.Blazor/blob/main/Material.Blazor/Material.Blazor.csproj) file built by Mark for Material.Blazor.
 
 ## Using `dotnet` with GitHub workflows
 [GitHub](https://github.com/) (or its competitors [GitLab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/) etc.) is a source code repository using the Git source code control system. This project is hosted on GitHub. GitHub offers much more than just source code control, and is a complete "Devops" envronment for software development. This includes automated software build and deployment using GitHub workflows. A (rather complex) [example](https://github.com/Material-Blazor/Material.Blazor/blob/main/.github/workflows/GithubActionsRelease.yml), again written by Mark, deploys releases of Material.Blazor, both creating and publishing the project's [Nuget package](https://www.nuget.org/packages/Material.Blazor), and building and deploying the [website](https://material-blazor.com/).
 
 ## Overall C# program structure
-Bringing the previous sections 
+Bringing the previous sections together gives a good appreciation of the structure around building a .NET program or library, albeit without seeing the code. The image below is the structure of this repo at the time of writing. If you're reading this on GitHub you'll see the current structure to the left, otherwise from Visual Studio this is in the Solution Explorer.
+
+![image](https://github.com/simonziegler/CSDesignPatternsExercises/assets/11708435/b0456204-28c9-4725-8fd0-a4757fd00ec8)
+
+The repo is brought together by the solution file with a `.sln` extension at the top level; don't edit these manually. This file tells Visual Studio what projects belong to the overall solution, and how to show extraneous files, such as this documentation (in a Markdown, `.md` file) in the Solution Explorer. Each project within the solution/repo (VS terminology versus Git terminology) is controlled by its `.csproj` file. The projects then have the following file types:
+- `.cs` files containing C# code
+- resources
+- images
+- `.css`, `.js`, `.scss` and `.ts` files for web applications
+- `.razor` and `.razor.cs` files, also for web applications using ASP.NET Blazor
+- plenty of other files depending upon the project!
+
+We are going to concern ourselves exclusively with `.cs` C# source code files from here on, with a nod towards `.csproj` files as we include nuget packages.
+
 ## C# language
 ### Main method
 ### Language constructs
