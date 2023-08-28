@@ -25,13 +25,13 @@ Note how in each case we are referencing the `CSPROJ` ("C # project file") file,
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<Project Sdk="Microsoft.NET.Sdk">									<!-- Determines the SDK to be used -->
+<Project Sdk="Microsoft.NET.Sdk">						<!-- Determines the SDK to be used -->
 
 	<PropertyGroup>
-		<OutputType>Exe</OutputType>								<!-- Determines that the output is an executable file -->
-		<TargetFramework>net7.0</TargetFramework>					<!-- Specifies .NET version 7, the current version released in November 2022 (.NET 8 is imminent) -->
-		<ImplicitUsings>enable</ImplicitUsings>						<!-- Google it -->
-		<Nullable>enable</Nullable>									<!-- Google it -->
+		<OutputType>Exe</OutputType>					<!-- Determines that the output is an executable file -->
+		<TargetFramework>net7.0</TargetFramework>			<!-- Specifies .NET version 7, the current version released in November 2022 (.NET 8 is imminent) -->
+		<ImplicitUsings>enable</ImplicitUsings>				<!-- Google it -->
+		<Nullable>enable</Nullable>						<!-- Google it -->
 	</PropertyGroup>
 
 	<ItemGroup>
