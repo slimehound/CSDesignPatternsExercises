@@ -1,6 +1,5 @@
 ﻿using MoreLinq;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Linq;
 
@@ -8,8 +7,6 @@ using System.Linq;
 
 const int count = 1_000_000;
 const int searchIndex = 551_467;
-
-
 
 List<Pair> baseList = new();
 
@@ -20,10 +17,8 @@ for (int i = 0; i < count; i++)
 
 baseList = baseList.Shuffle().ToList();
 
+
 string value;
-
-
-
 
 Pair[] array = baseList.ToArray();
 
@@ -37,22 +32,6 @@ Console.WriteLine();
 
 
 
-
-
-ImmutableArray<Pair> iArray = baseList.ToImmutableArray();
-
-sw.Restart();
-
-value = iArray.Where(x => x.Index == searchIndex).Select(x => x.Text).FirstOrDefault();
-
-Console.WriteLine($"Immutable Array item {value} searched in {sw.ElapsedTicks:N0} ticks");
-Console.WriteLine();
-Console.WriteLine();
-
-
-
-
-
 List<Pair> list = baseList.ToList();
 
 value = list.Where(x => x.Index == searchIndex).Select(x => x.Text).FirstOrDefault();
@@ -60,21 +39,6 @@ value = list.Where(x => x.Index == searchIndex).Select(x => x.Text).FirstOrDefau
 Console.WriteLine($"List item {value} searched in {sw.ElapsedTicks:N0} ticks");
 Console.WriteLine();
 Console.WriteLine();
-
-
-
-
-
-
-ImmutableList<Pair> iList = baseList.ToImmutableList();
-
-value = iList.Where(x => x.Index == searchIndex).Select(x => x.Text).FirstOrDefault();
-
-Console.WriteLine($"Immutable List item {value} searched in {sw.ElapsedTicks:N0} ticks");
-Console.WriteLine();
-Console.WriteLine();
-
-
 
 
 
@@ -94,29 +58,6 @@ value = dict[searchIndex];
 Console.WriteLine($"Dictionary item {value} indexed in {sw.ElapsedTicks:N0} ticks");
 Console.WriteLine();
 Console.WriteLine();
-
-
-
-
-
-
-ImmutableDictionary<int, string> iDict = baseList.ToImmutableDictionary(x => x.Index, x => x.Text);
-
-sw.Restart();
-
-value = iDict.Where(x => x.Key == searchIndex).Select(x => x.Value).FirstOrDefault();
-
-Console.WriteLine($"Immutable Dictionary item {value} searched in {sw.ElapsedTicks:N0} ticks");
-
-sw.Restart();
-
-value = iDict[searchIndex];
-
-Console.WriteLine($"Immutable Dictionary item {value} indexed in {sw.ElapsedTicks:N0} ticks");
-Console.WriteLine();
-Console.WriteLine();
-
-
 
 
 
