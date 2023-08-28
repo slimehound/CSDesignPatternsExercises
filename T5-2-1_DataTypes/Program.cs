@@ -4,6 +4,8 @@ var result1 = int1 + int2;
 
 Console.WriteLine($"{int1} + {int2} = {result1} and is of type '{result1.GetType()}'");
 
+Console.WriteLine();
+
 
 
 
@@ -12,6 +14,8 @@ var result2 = double1 * int2;
 
 Console.WriteLine($"{double1} * {int2} = {result2} and is of type '{result2.GetType()}'");
 
+Console.WriteLine();
+
 
 
 
@@ -19,7 +23,9 @@ string str1 = "Simon";
 var str2 = "Ziegler";
 var result3 = str1 + str2;
 
-Console.WriteLine($"'{str1}' * '{str2}' is '{result3}' and is of type '{result3.GetType()}'");
+Console.WriteLine($"'{str1}' + '{str2}' is '{result3}' and is of type '{result3.GetType()}'");
+
+Console.WriteLine();
 
 
 
@@ -31,6 +37,8 @@ var result4 = string.Join(' ', names);
 
 Console.WriteLine($"'{str1}' joined with the char ' ' with '{str2}' is '{result4}' and is of type '{result4.GetType()}'");
 
+Console.WriteLine();
+
 
 
 
@@ -39,6 +47,8 @@ Console.WriteLine($"'{str1}' joined with the char ' ' with '{str2}' is '{result4
 var result5 = string.Join(" and ", names);
 
 Console.WriteLine($"'{str1}' joined with the string \" and \" '{str2}' is '{result5}' and is of type '{result5.GetType()}'");
+
+Console.WriteLine();
 
 
 

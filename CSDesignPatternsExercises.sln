@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T5-2-1_DataTypes", "T5-2-1_DataTypes\T5-2-1_DataTypes.csproj", "{63A67A58-DF6B-4015-B2AE-13BF79686B50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T5-2-2_Conditionals", "T5-2-2_Conditionals\T5-2-2_Conditionals.csproj", "{0200467B-193C-4471-B2BE-21D8DD89F7C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{63A67A58-DF6B-4015-B2AE-13BF79686B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63A67A58-DF6B-4015-B2AE-13BF79686B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63A67A58-DF6B-4015-B2AE-13BF79686B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0200467B-193C-4471-B2BE-21D8DD89F7C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0200467B-193C-4471-B2BE-21D8DD89F7C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0200467B-193C-4471-B2BE-21D8DD89F7C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0200467B-193C-4471-B2BE-21D8DD89F7C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

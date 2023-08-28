@@ -49,7 +49,7 @@ Also see the considerably more complex [CSPROJ](https://github.com/Material-Blaz
 ## 3. Using `dotnet` with GitHub workflows
 [GitHub](https://github.com/) (or its competitors [GitLab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/) etc.) is a source code repository using the Git source code control system. This project is hosted on GitHub. GitHub offers much more than just source code control, and is a complete "Devops" envronment for software development. This includes automated software build and deployment using GitHub workflows. A (rather complex) [example](https://github.com/Material-Blazor/Material.Blazor/blob/main/.github/workflows/GithubActionsRelease.yml), again written by Mark, deploys releases of Material.Blazor, both creating and publishing the project's [Nuget package](https://www.nuget.org/packages/Material.Blazor), and building and deploying the [website](https://material-blazor.com/).
 
-## 34 Overall C# program structure
+## 4. Overall C# program structure
 Bringing the previous sections together gives a good appreciation of the structure around building a .NET program or library, albeit without seeing the code. The image below is the structure of this repo at the time of writing. If you're reading this on GitHub you'll see the current structure to the left, otherwise from Visual Studio this is in the Solution Explorer.
 
 <img src="https://user-images.githubusercontent.com/11708435/263727952-b0456204-28c9-4725-8fd0-a4757fd00ec8.png" alt="image" width="300">
@@ -130,7 +130,7 @@ and therefore the method can change the data value (generally considered to be a
 <figcaption><b>Figure 6 - Built in reference types</b></figcaption><br><br>
 
 #### Exercise 5.2.1.
-1. Run project `T01_DataTypes` to see some operations on `int`, `double` and `string` variables.
+1. Run project `T5-2-1_DataTypes` to see some operations on `int`, `double` and `string` variables.
 1. Add some code to print out the individual characters of the array `name` by printing `name[0]` and 'name[1]'.
 1. Now try the same for the next index, `name[3]` and see what happens.
 1. Print out `str1[3]` to see how you can access an indvidual character of a string. Also try `str1[1000]` to see what happens.
@@ -141,21 +141,31 @@ and therefore the method can change the data value (generally considered to be a
 There are three types of conditional in C#:
 - `if` ... `else if` ... `else` statements (from C/C++).
 - `switch` statements (from C/C++).
-- `switch` expressions (invented for C# 8).
+- `switch` expressions (added for C# 8).
 
 #### Exercise 5.2.2.
+1. Run project `T5-2-2_Conditionals` to see `if` statements, `switch` statements and `switch` expressions in action.
+1. In the first `if` statement we are testing to see if the `randomNumber` modulus zero is equal to zero. Change this to test if `randomNumber` modulus 0 is not equal to 1 instead - the same result but with inverted logic (hint: '!=').
+1. In the test with `else if` insert another `else if` before the current one, testing to see if `randomNumber` is greater than or equal to 4. Now change that 4 to 7 and see what happens.
+1. In the `if (boolean)` example, invert the logic to test if `boolean` is false. There are two ways to do this, and one is not very obvious. Google is a better friend here than me.
 
+### 5.2.3 Iteration
+Whenever you're programming stuff, you'll find that you need to do the same thing over and again on a dataset. This is where you need to iterate across a dataset.
+1. `for` loops have a starting condition, a termination condition and an increment statement.
+1. `foreach` loops iterate over a given dataset, executing code "for each" element of that dataset.
+1. `while` loops continue doing something while a condition is true. They assess the condition at the head of the loop so the code inside the loop is executed zero or more times.
+1. `do ... while` loops are (to my mind) the ugly cousin of `while` loops. They test the condition at the end of the loop so they execute the loop's code one or more times. Yuk.
 
-### 5.2.3. Classes and structs
+### 5.2.4. Classes and structs
 C# is an object orientated language, and objects come in two flavours: `struct` and `class`. That's a lie, there's also `record`, which you can Google (records seem to be little used, but I use them all across my business's
 system, because I can make data immutable and therefore very safe with a `record`).
 
 Both a `struct` and a `class` are data types that you can define, and which both hold data and methods that encapsulate functionality that you want to perform on the data in an object. A `struct` is a value type whereas a `class` is
 a reference type. There are then variations on the theme of each, so Google C# documentation to look into `readonly struct` and other variants.
 
-#### Exercise 5.2.3.
+#### Exercise 5.2.4.
 
-### 5.2.4. Interfaces
-### 5.2.5. Generics
+### 5.2.5. Interfaces
+### 5.2.6. Generics
 ## 5.3. Collections and collection performance
 ## 5.4. LINQ
