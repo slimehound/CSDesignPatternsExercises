@@ -35,8 +35,7 @@ Console.WriteLine($"Class: {testClass.Value}, Struct: {testStruct.Value}");
 
 Console.ReadKey();
 
-
-void MessWithValues(TestClass testClass, TestStruct testStruct)
+static void MessWithValues(TestClass testClass, TestStruct testStruct)
 {
     testClass.Value = "Messed With";
     testStruct.Value = "Messed With";
