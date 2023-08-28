@@ -223,6 +223,36 @@ of other classes. Lists for instance can contain any type of item. Exercise 5.2.
 
 #### Exercise 5.2.6
 1. Run project `T5-2-6_Generics`.
+1. Note that this project depends upon, and uses classes from project `T5-2-5_Interfaces`.
+  - Look at the references for the project by right clicking it and selecting references from the dropdown menu.
+  - Also look at the `CSPROJ`. You add a project reference from the drop down menu, and this reference is then added by VS to the `CSPROJ`.
+1. Hover over the `indoorItem` variable in the second loop and inspect the object type.
+1. Modify the `BelongingList<T>` to return the count of plants and a list of plants.
 
 ## 5.3. Collections and collection performance
+We have used arrays and lists, both of which are of type `ICollection`. We have also seen `IEnumerable`, from which `ICollection` is derived. Google these.
+
+The question is why do we have different collection types? The answer is twofold: performance and utility. Arrays have a defined size and cannot have items added or removed. Lists can add
+and remove items and have dynamic size. Arrays are faster to index than lists.
+
+Searching through both arrays and lists for a specific element is slow and you need to do a `foreach` until you find the item. With big data, this is bad. This is where dictionaries come into play.
+A dictionary holds both the value of an item, and a key by which to find it. Dictionaries use a hashtable to store the hash value of the keys, and these are super fast to search. The downside is that
+dicationaries are otherwise a little slower than arrays and lists for other purposes.
+
+#### Exercise 5.3
+1. Run project `T5-3a_CollectionPerformance`.
+  - This project builds an `Array<T>`, `List<T>` and `Dictionary<TKey, TValue>`, populated with the same data.
+  - Each of these collections then has a both a query run on it to find a specific item, and is indexed directly.
+  - In each case the array and list are faster than the dictionary - so what's the point of a dictionary?
+  - This is a cheat example though, because the data is sorted.
+1. Run project `T5-3abCollectionPerformance`.
+  - This project is similar to the previous one, however it uses the Nuget package morelinq to shuffle the data.
+  - Directly indexing the array and list won't work, because we no longer implicityly know the index of the item we want to find.
+  - So arrays and lists in this case require a query (with an embedded `foreach`).
+  - The dictionary however has its hashtable, and so can still index the items we want from the key value. The dictionary proves its worth in this instance.
+  - Doing any data analysis, having a thorough understanding of different collection types and their benefits is key.
+  - The example also shows immutable versions of each collection type. Immutability can be very useful, but again be aware of consequences for performance.
+
 ## 5.4. LINQ
+
+By now you have seen

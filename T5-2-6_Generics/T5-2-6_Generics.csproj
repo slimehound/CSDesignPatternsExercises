@@ -8,4 +8,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\T5-2-5_Interfaces\T5-2-5_Interfaces.csproj" />
+  </ItemGroup>
 </Project>
