@@ -198,14 +198,19 @@ Features of classes:
 
 #### Exercise 5.2.4.
 1. Run project `T5-2-4_ClassAndStruct`.
-1. Write some code that finds all the prime numbers up to and including a predetermined limit, built as a new console project that one of you commits to GitHub where you work together (this is called paired programming), and the other forks
-(who has the faster laptop?). Code the limit as a `const` integer value. Try different ways of doing this and try to make it run as fast as possible by being clever with your algortithm. This is a 30 minute exercise.
-
-
-
-#### Exercise 5.2.4.
+1. Copy this code to a new repo and modify the `Car` class to make it abstract. Then add 2 sealed classes for petrol and electric vehicles:
+  - Petrol vehicles can be manual or automatic.
+  - EVs are only automatic.
+  - For petrol vehicles add properties `MilesPerGallon` and `TankSizeLitres`, both of which are populated from the constructor.
+  - For EVs add properties `MilesPerKwh` and `BatteryCapacityKwh`, both of which again are populated from the constructor.
+  - Add an abstract method `GetRange()` that returns a double with the range of the vehicle in miles. Implement this in both the petrol and EV classes.
+  - Add another abstract method `GetCostPerMile()` that takes a double parameter `costPerUnit` with the cost in £ per unit of energy (litres of petrol or kWh respectively) and returns the cost per mile.
+  - Call these and display the results from your top level `Program.cs`.
 
 ### 5.2.5. Interfaces
+Interfaces allow you to specify a fragment of functionality that different classes implement if they inherit from that interface. An interface lacks its own code.
+Classes can then implement a whole range of interfaces.
+
 ### 5.2.6. Generics
 ## 5.3. Collections and collection performance
 ## 5.4. LINQ

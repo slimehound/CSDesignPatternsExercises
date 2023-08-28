@@ -1,4 +1,6 @@
-﻿// for loops
+﻿// foreach loops are in the next tutorial.
+
+// for loops
 for (int i = 0; i < 10; i++)
 {
     Console.Write($"{i} ");
