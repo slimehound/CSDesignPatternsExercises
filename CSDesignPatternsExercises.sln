@@ -24,6 +24,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T5-2-1_DataTypes", "T5-2-1_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T5-2-2_Conditionals", "T5-2-2_Conditionals\T5-2-2_Conditionals.csproj", "{0200467B-193C-4471-B2BE-21D8DD89F7C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T5-2-3_Iteration", "T5-2-3_Iteration\T5-2-3_Iteration.csproj", "{023CE846-3F3F-4A88-8799-164BC827D819}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T5-2-4_ClassAndStruct", "T5-2-4_ClassAndStruct\T5-2-4_ClassAndStruct.csproj", "{B969F73D-A8D9-4E77-BAFE-29FA291D4E60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +54,14 @@ Global
 		{0200467B-193C-4471-B2BE-21D8DD89F7C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0200467B-193C-4471-B2BE-21D8DD89F7C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0200467B-193C-4471-B2BE-21D8DD89F7C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{023CE846-3F3F-4A88-8799-164BC827D819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{023CE846-3F3F-4A88-8799-164BC827D819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{023CE846-3F3F-4A88-8799-164BC827D819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{023CE846-3F3F-4A88-8799-164BC827D819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B969F73D-A8D9-4E77-BAFE-29FA291D4E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B969F73D-A8D9-4E77-BAFE-29FA291D4E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B969F73D-A8D9-4E77-BAFE-29FA291D4E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B969F73D-A8D9-4E77-BAFE-29FA291D4E60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

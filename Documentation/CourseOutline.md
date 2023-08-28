@@ -154,14 +154,54 @@ Whenever you're programming stuff, you'll find that you need to do the same thin
 1. `for` loops have a starting condition, a termination condition and an increment statement.
 1. `foreach` loops iterate over a given dataset, executing code "for each" element of that dataset.
 1. `while` loops continue doing something while a condition is true. They assess the condition at the head of the loop so the code inside the loop is executed zero or more times.
-1. `do ... while` loops are (to my mind) the ugly cousin of `while` loops. They test the condition at the end of the loop so they execute the loop's code one or more times. Yuk.
+1. `do ... while` loops are the ugly cousin of `while` loops. They test the condition at the end of the loop so they execute the loop's code one or more times. I'm sure there's a good use for them, but I
+always felt that with clarity there's a better way of doing things.
+
+#### Exercise 5.2.3.
+1. Run project `T5-2-3_Iteration`.
+1. Write some code that finds all the prime numbers up to and including a predetermined limit, built as a new console project that one of you commits to GitHub where you work together (this is called paired programming), and the other forks
+(who has the faster laptop?). Code the limit as a `const` integer value. Try different ways of doing this and try to make it run as fast as possible by being clever with your algortithm. This is a 30 minute exercise.
 
 ### 5.2.4. Classes and structs
 C# is an object orientated language, and objects come in two flavours: `struct` and `class`. That's a lie, there's also `record`, which you can Google (records seem to be little used, but I use them all across my business's
 system, because I can make data immutable and therefore very safe with a `record`).
 
 Both a `struct` and a `class` are data types that you can define, and which both hold data and methods that encapsulate functionality that you want to perform on the data in an object. A `struct` is a value type whereas a `class` is
-a reference type. There are then variations on the theme of each, so Google C# documentation to look into `readonly struct` and other variants.
+a reference type. There are then variations on the theme of each, so Google C# documentation to look into `readonly struct` and other variants. We'll focus on `class` and you can review `struct` separately.
+
+Features of classes:
+- They belong to a `namespace` and have different levels of visibility or "scope" (check whether I'm right here):
+  - `public` is visible inside and outside of the namespace,
+  - `internal` is visible inside the namespace but not externally,
+  - `private` is visible only inside the class within which it is defined - this only makes sense for sub-classes (a class within a class).
+- They can also be:
+  - `static`, meaning that the user cannot instantiate an object of that class, but the class does have methods and members. So there's basically one version of the class for your whole
+  assembly.
+  - `abstract` are classes that cannot be instantiated, but need other classes to inherit from them.
+  - `sealed` are classes you cannot inherit from - this makes them faster to run. Arguably C# should have been designed such that the default for classes is that they are sealed, and then to have an optional "unseal"
+  see [this video by Nick Chapsas](https://www.youtube.com/watch?v=d76WWAD99Yo).
+- They have members that are either fields and properties:
+  - Fields are variables belonging to the class that are declared and do not have `get` and `set` methods. Keep fields only for `private` members (I think - Google it).
+  - Properties are variables that do have `get` and `set` (plus `init` - Google it) methods.
+  - Both have scopes of `public`, `internal`, `private`, `protected` (visible inside the class and its descendents) and `private protected` (visible inside the class and its descendents within the same namespace).
+  - Fields can also have a `readonly` decoration, so they can only be set with an intial value or within the constructor (more on this below).
+  - Property `set` methods can be `private set` (not quite the same as `init`).
+- They have methods:
+  - These methods act both on internal and external data (i.e. supplied in parameters to the method).
+  - Can be `public`, `internal`, `protected private` and `private`.
+  - Can be `static`.
+  - Can be `abstract` within an `abstract class` - these methods have no body and need to be implemented by inherited classes.
+  - Can be `virtual` meaning that it is expected that an inherited class may want to override the method.
+  - Can be `override` meaning that they override an `abstract` or `virtual` method in a parent class.
+  - Can be `new` meaning that they override a method in a parent class. Note that if you cast one of these objects to the parent class, the parent's implementation of the method will be used.
+  This feels like an "anti pattern", so I try not to use the `new` decorator.
+
+#### Exercise 5.2.4.
+1. Run project `T5-2-4_ClassAndStruct`.
+1. Write some code that finds all the prime numbers up to and including a predetermined limit, built as a new console project that one of you commits to GitHub where you work together (this is called paired programming), and the other forks
+(who has the faster laptop?). Code the limit as a `const` integer value. Try different ways of doing this and try to make it run as fast as possible by being clever with your algortithm. This is a 30 minute exercise.
+
+
 
 #### Exercise 5.2.4.
 
