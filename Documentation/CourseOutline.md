@@ -198,6 +198,7 @@ Features of classes:
 
 #### Exercise 5.2.4.
 1. Run project `T5-2-4_ClassAndStruct`.
+1. Step through the program with the debugger, inspecting what is going on at all stages.
 1. Copy this code to a new repo and modify the `Car` class to make it abstract. Then add 2 sealed classes for petrol and electric vehicles:
   - Petrol vehicles can be manual or automatic.
   - EVs are only automatic.
@@ -209,8 +210,19 @@ Features of classes:
 
 ### 5.2.5. Interfaces
 Interfaces allow you to specify a fragment of functionality that different classes implement if they inherit from that interface. An interface lacks its own code.
-Classes can then implement a whole range of interfaces.
+Classes can then implement a whole range of interfaces. You will use interfaces extensively in the C# Design Patterns course.
+
+#### Exercise 5.2.5.
+1. Run project `T5-2-5_Interfaces`.
+1. Understand this and be ready for the main coursework where you will encounter this a lot.
+1. Look at certain classes that you will use frequently. For instance `List<T>` that's coming up has an interesting interface heirarchy. .NET documentation covers this.
 
 ### 5.2.6. Generics
+You have seen generics in previous exercises, for instance `List<Vechicle>` is a list that can contain objects of class vehicle. Generics add power to C#, allowing classes and methods to be reused for a wide range
+of other classes. Lists for instance can contain any type of item. Exercise 5.2.5 had a list containing any object belong to a class that implements the `IBelonging` interface: this is `List<IBelonging>`.
+
+#### Exercise 5.2.6
+1. Run project `T5-2-6_Generics`.
+
 ## 5.3. Collections and collection performance
 ## 5.4. LINQ
