@@ -4,7 +4,7 @@ int randomNumber = random.Next(1, 11);
 // if ... else statement - note that you don't need the else bit.
 Console.Write($"{randomNumber} is ");
 
-if (randomNumber % 2 == 0)
+if (randomNumber % 2 != 1)
 {
     Console.WriteLine("even.");
 }
@@ -25,6 +25,10 @@ if (randomNumber >= 6)
 {
     Console.WriteLine("greater than or equal to six.");
 }
+else if (randomNumber >= 4)
+{
+    Console.WriteLine("greater than or equal to four.");
+}
 else if (randomNumber % 2 == 0)
 {
     Console.WriteLine("less than six and even.");
@@ -40,11 +44,11 @@ Console.WriteLine();
 
 
 // if statement testing a boolean value directly = note how you don't need a comparison operator to ask if it's true.
-bool boolean = randomNumber % 2 == 0;
+bool boolean = randomNumber % 2 == 1;
 
 Console.Write($"{randomNumber} is still ");
 
-if (boolean)
+if (!boolean)
 {
     Console.WriteLine("even.");
 }

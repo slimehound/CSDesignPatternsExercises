@@ -4,8 +4,8 @@ List<Vehicle> vehicles = new()
 {
     new Motorbike("Ducati"),
     new Motorbike("Honda"),
-    new Car("Mini", Transmission.Manual),
-    new Car("Kia", Transmission.Automatic),
+    new PetrolCar("Mini", Transmission.Manual),
+    new PetrolCar("Kia", Transmission.Automatic),
     new Truck("White", TruckType.Van),
     new Truck("Volvo", TruckType.Articulated),
 };

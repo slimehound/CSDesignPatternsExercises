@@ -5,8 +5,15 @@ namespace T5_2_4_ClassAndStruct;
 /// <summary>
 /// A standard car.
 /// </summary>
-public sealed class Car : Vehicle
+public abstract class Car : Vehicle
 {
+    private Transmission transmission;
+
+    public Car(string name, Transmission transmission) : base(name)
+    {
+        this.transmission = transmission;
+    }
+
     // Implementing a getter as a function.
     public override string VehicleType
     {
@@ -15,23 +22,23 @@ public sealed class Car : Vehicle
             return "Car";
         }
     }
-
-    // Impementing a getter with a Lamda.
+    
+    // Impementing a getter with a Lambda.
     public override int NumberOfWheels => 2;
 
-    private readonly Transmission transmission;
-    public override Transmission Transmission
-    {
-        get
-        {
-            return transmission;
-        }
-    }
+    //private readonly Transmission transmission;
+    //public override Transmission Transmission
+    //{
+    //    get
+    //    {
+    //        return transmission;
+    //    }
+    //}
 
-    public Car(string name, Transmission transmission) : base(name)
-    {
-        this.transmission = transmission;
-    }
+    //public Car(string name, Transmission transmission) : base(name)
+    //{
+    //    this.transmission = transmission;
+    //}
 
     public override string ToString()
     {

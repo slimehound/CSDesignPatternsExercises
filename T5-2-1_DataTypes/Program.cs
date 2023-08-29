@@ -59,6 +59,25 @@ TestModifyingData(int1, str1);
 
 Console.WriteLine($"int1 = '{int1}' and str1 = '{str1}' after failed attempt at modification in a method");
 
+Console.WriteLine();
+
+
+
+
+// Exercise 5.2.1
+Console.WriteLine($"{names[0]}, {names[1]}");
+
+Console.WriteLine($"{str1[3]}");
+
+Console.WriteLine();
+
+
+string newResult1 = str2[0..5] + "wibble";
+
+string newResult2 = str2.Replace("er","wibble");
+
+Console.WriteLine($"{newResult1} and {newResult2}");
+
 
 
 Console.ReadKey();
