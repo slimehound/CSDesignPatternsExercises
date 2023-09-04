@@ -4,15 +4,23 @@ List<Vehicle> vehicles = new()
 {
     new Motorbike("Ducati"),
     new Motorbike("Honda"),
-    new PetrolCar("Mini", Transmission.Manual),
-    new PetrolCar("Kia", Transmission.Automatic),
+    new PetrolCar("Mini", Transmission.Manual, 2.5, 90),
+    new PetrolCar("Kia", Transmission.Automatic, 3.5, 90),
+    new ElectricCar("Tesla", 3.5, 90),
     new Truck("White", TruckType.Van),
     new Truck("Volvo", TruckType.Articulated),
 };
 
+
+
 foreach (var vehicle in vehicles)
 {
     Console.WriteLine(vehicle); // this implicitly calls the ToString() method of the vehicle in question.
+
+    if (vehicle is Car car)
+    {
+        Console.WriteLine("    Range is " + car.GetRange().ToString("N2") + " Miles");
+    }
 }
 
 Console.WriteLine();

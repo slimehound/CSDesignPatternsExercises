@@ -17,9 +17,32 @@ public sealed class PetrolCar : Car
         }
     }
 
-    public PetrolCar(string name, Transmission transmission) : base(name, transmission)
+    // Implementing a getter as a function.
+    public override string VehicleType
+    {
+        get
+        {
+            return "Petroleum Car";
+        }
+    }
+
+    public PetrolCar(string name, Transmission transmission, double milesPerGallon, double tankSizeLitres) : base(name)
     {
         this.transmission = transmission;
+
+        MilesPerGallon = milesPerGallon;
+        TankSizeLitres = tankSizeLitres;
+    }
+
+    public double MilesPerGallon { get; private set; }
+
+    public double TankSizeLitres { get; private set; }
+
+    public override double GetRange() => MilesPerGallon * TankSizeLitres * 0.21997;
+
+    public override string ToString()
+    {
+        return $"{VehicleType} - {Name} ({Transmission}), {MilesPerGallon:N2} MPG, {TankSizeLitres:N2} l";
     }
 }
 

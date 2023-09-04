@@ -10,6 +10,15 @@ public sealed class ElectricCar : Car
 {
     public override Transmission Transmission => Transmission.Automatic;
 
+    // Implementing a getter as a function.
+    public override string VehicleType
+    {
+        get
+        {
+            return "Electric Car";
+        }
+    }
+
     public ElectricCar(string name, double milesPerKwh, double batteryCapacityKwh) : base(name)
     {
         MilesPerKwh = milesPerKwh;
@@ -34,5 +43,12 @@ public sealed class ElectricCar : Car
     //    }
     //}
 
-    public double KwhPerHundredKilometers => 100 / (1.6 * MilesPerKwh);
+    //public double KwhPerHundredKilometers => 100 / (1.6 * MilesPerKwh);
+
+    public override double GetRange() => MilesPerKwh * BatteryCapacityKwh;
+
+    public override string ToString()
+    {
+        return $"{VehicleType} - {Name}, {MilesPerKwh:N2} M/kWh, {BatteryCapacityKwh:N2} kWh";
+    }
 }
